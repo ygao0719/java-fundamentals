@@ -1,7 +1,7 @@
 import java.lang.*;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.time.format.Duration;
+import java.time.Duration;
 
 public class Main {
     public static void main(String[] args) {
@@ -54,16 +54,17 @@ public class Main {
     public static void clock(){
         LocalDateTime pres = LocalDateTime.now();
         while(true){
-            int preSecond = pres.getSecond();
-
-            DateTimeFormatter dtf = DateTimeFormatter.ofPattern("HH:mm:ss");
+            // int preSecond = pres.getSecond();
             LocalDateTime now = LocalDateTime.now();
-            int second = now.getSecond();
-            if (preSecond != second){
-                System.out.println(now.format(dtf));
+            Duration timeDiff = java.time.Duration.between(pres, now);
+            long seconds = timeDiff.getSeconds();
+            if(seconds >= 1){
+                String time = now.format(DateTimeFormatter.ofPattern("HH:mm:ss"));
+                System.out.println(time);
+                pres = now;
+            }
             }
     
         }
 
     }
-}
