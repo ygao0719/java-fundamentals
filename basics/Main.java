@@ -1,6 +1,7 @@
 import java.lang.*;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.time.format.Duration;
 
 public class Main {
     public static void main(String[] args) {
@@ -15,9 +16,9 @@ public class Main {
         System.out.println("I own " + turtleCount + " " + pluralize("turtle", turtleCount) + ".");
 
         flipNHeads(3);
-        while(true){
-            clock();
-        }
+    
+        clock();
+        
         }
 
    //methods
@@ -52,13 +53,16 @@ public class Main {
 
     public static void clock(){
         LocalDateTime pres = LocalDateTime.now();
-        int preSecond = pres.getSecond();
+        while(true){
+            int preSecond = pres.getSecond();
 
-        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("HH:mm:ss");
-        LocalDateTime now = LocalDateTime.now();
-        int second = now.getSecond();
-        if (preSecond != second){
-            System.out.println(now.format(dtf));
+            DateTimeFormatter dtf = DateTimeFormatter.ofPattern("HH:mm:ss");
+            LocalDateTime now = LocalDateTime.now();
+            int second = now.getSecond();
+            if (preSecond != second){
+                System.out.println(now.format(dtf));
+            }
+    
         }
 
     }
