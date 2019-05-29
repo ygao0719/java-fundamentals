@@ -6,7 +6,6 @@ public class Roll {
         for (int i = 0; i < n; i ++){
             rollResult[i] = (int)(Math.random() * ((6 - 1) + 1)) + 1;
         }
-
         return rollResult;
     }
 }
