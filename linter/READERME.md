@@ -9,4 +9,4 @@
        Don’t show an error if the line ends with an closing curly brace }
        Don’t show an error if the line contains if or else
 
-This application will return the numbers of error.
+This application will return the numbers of errors.
