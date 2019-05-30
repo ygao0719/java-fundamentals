@@ -8,10 +8,9 @@ public class Tally {
     public String tally(List<String> input){
         HashMap<String,Integer> voteCounts = new HashMap<>();
 
-        for (String element : input){
-            voteCounts.put(element, 0);
-        }
         for (String voter : input){
+            voteCounts.put(voter, 0);
+
             int countSoFar = voteCounts.get(voter);
             voteCounts.put(voter,countSoFar + 1);
         }
