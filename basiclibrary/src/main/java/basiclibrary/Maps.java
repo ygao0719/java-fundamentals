@@ -3,7 +3,7 @@ package basiclibrary;
 import java.util.HashSet;
 
 public class Maps {
-    public void maps(int[][] inputArr){
+    public String maps(int[][] inputArr){
         int minValue = 9000;
         int maxValue = 0;
         HashSet<Integer> h = new HashSet<Integer>();
@@ -20,13 +20,13 @@ public class Maps {
             }
         }
 
-        System.out.println("High: " + maxValue);
-        System.out.println("Low: " + minValue);
+        String message = "High: " + maxValue + "Low: " + minValue;
 
         for (int i = minValue; i <= maxValue; i ++){
             if (!h.contains(i)){
-                System.out.println("Never saw temperature: " + i);
+                message = message + ("Never saw temperature: " + i);
             }
         }
+        return message;
     }
 }
