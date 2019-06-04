@@ -1,1 +1,20 @@
-# java-fundamentals## Basics:    methods:    1. Pluralize    2. flipNHeads    3. clock## basiclibrary    methods:    1. roll dice    2. contains duplicates    3. calculating averages    4. array of arrays    5. Maps    6. Tally
+# java-fundamentals
+## Basics:
+    methods:
+    1. Pluralize
+    2. flipNHeads
+    3. clock
+
+
+## basiclibrary
+    methods:
+    1. roll dice
+    2. contains duplicates
+    3. calculating averages
+    4. array of arrays
+    5. Maps
+    6. Tally
+## Inheritance 
+  classes:
+  1. restaurant (superclass)
+  2. review (subclass)
