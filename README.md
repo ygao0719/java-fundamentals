@@ -14,7 +14,7 @@
     4. array of arrays
     5. Maps
     6. Tally
-## Inheritance 
+## [Inheritance] (./inheritance/README.md)
   classes:
   1. restaurant (superclass)
   2. review (subclass)
