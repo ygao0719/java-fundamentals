@@ -1,29 +1,48 @@
 package inheritance;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Restaurant {
     private String name;
     private int numOfStar;
     private int numOfDollors;
+    private List<Review> reviews;
 
-    public Restaurant(String name, int numOfStar, int numOfDollors){
-
+    //constructor
+    public Restaurant(String name, int numOfDollors){
         this.name = name;
-        this.numOfStar = numOfStar;
+        this.numOfStar = 0;
         this.numOfDollors = numOfDollors;
+        this.reviews = new ArrayList<>();
+
     }
 
     public String toString(){
-        return String.format("The restaurant %s has %d stars and %d dollor signs.", this.name, this.numOfStar, this.numOfDollors);
+        return String.format("The restaurant %s has %d stars and %d dollor signs with reviews: %s.",
+                this.name, this.numOfStar, this.numOfDollors,this.reviews);
     }
 
     public String getName(){
         return this.name;
     }
+
     public int getNumOfStar(){
         return  this.numOfStar;
     }
-    public String addReview(String body,String author, int numOfStarFromReview){
-        Review review = new Review(this.name,this.numOfStar,this.numOfDollors,body,author,numOfStarFromReview);
-        return review.toString();
+
+    public void addReview(Review newReview){
+        if(newReview != null){
+            reviews.add(newReview);
+            updateStar();
+        }
     }
+    public void updateStar(){
+        int sum = 0;
+        for(Review r : reviews){
+            sum += r.getNumOfStarFromReview();
+        }
+        numOfStar = sum/reviews.size();
+    }
+
 }
