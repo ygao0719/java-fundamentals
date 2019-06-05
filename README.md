@@ -18,3 +18,5 @@
   classes:
   1. restaurant
   2. review
+  3. shop
+  4. Theater
