@@ -18,6 +18,7 @@ public class TheaterTest {
         instanceForTest.removeMovie("Fast");
 
         String expect = "The Seattle has movies [Fast fusion, Fast car].";
+
         assertEquals(expect, instanceForTest.toString());
     }
     //test for people just go to theater and get popcorn no movies
