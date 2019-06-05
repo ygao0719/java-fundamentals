@@ -10,8 +10,10 @@ public class Review {
         this.author = author;
         this.numOfStarFromReview = numOfStarFromReview;
     }
+
     public String toString(){
-        return String.format("The review: '%s' is written by %s with %d stars.", this.body, this.author, this.numOfStarFromReview);
+        return String.format("The review: '%s' is written by %s with %d stars.",
+                this.body, this.author, this.numOfStarFromReview);
     }
 
     public String getBody(){

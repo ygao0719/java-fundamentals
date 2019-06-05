@@ -30,13 +30,14 @@ public class Restaurant {
     public int getNumOfStar(){
         return  this.numOfStar;
     }
-
+    //add review for restaurant
     public void addReview(Review newReview){
         if(newReview != null){
             reviews.add(newReview);
             updateStar();
         }
     }
+
     public void updateStar(){
         int sum = 0;
         for(Review r : reviews){
