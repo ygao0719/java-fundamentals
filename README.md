@@ -16,5 +16,5 @@
     6. Tally
 ## [Inheritance](./inheritance/README.md)
   classes:
-  1. restaurant (superclass)
-  2. review (subclass)
+  1. restaurant
+  2. review
