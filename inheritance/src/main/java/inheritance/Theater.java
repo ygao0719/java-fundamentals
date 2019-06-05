@@ -16,7 +16,7 @@ public class Theater {
     }
     //add movies
     public void addMovie(String newMovie){
-        if(newMovie.equals("")) {
+        if(!newMovie.equals("")) {
             movies.add(newMovie);
         }
     }
