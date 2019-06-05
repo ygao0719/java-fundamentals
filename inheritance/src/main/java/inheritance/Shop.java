@@ -17,8 +17,14 @@ public class Shop {
     }
 
     public String toSting(){
-        return String.format("The %s is a %d dollor signs shop which %s. %s",
-                this.name,this.numOfDollor,this.descrip,this.reviews);
+        if(this.reviews.isEmpty()) {
+            return String.format("The %s is a %d dollor signs shop which %s.",
+                    this.name, this.numOfDollor, this.descrip);
+        }else{
+            return String.format("The %s is a %d dollor signs shop which %s. %s",
+                    this.name, this.numOfDollor, this.descrip, this.reviews);
+
+        }
     }
 
     public void addReview(Review newReview){
