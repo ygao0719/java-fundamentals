@@ -1,19 +1,44 @@
 package inheritance;
 
-public class Review extends Restaurant{
+public class Review {
     private String body;
     private String author;
     private int numOfStarFromReview;
-
-    public Review(String name, int numOfStar, int numOfDollors,String body, String author, int numOfStarFromReview){
-        super(name,numOfStar,numOfDollors);
+    private String movieName;
+    //constructor for no movie
+    public Review(String body, String author, int numOfStarFromReview){
         this.body = body;
         this.author = author;
         this.numOfStarFromReview = numOfStarFromReview;
     }
-    public String toString(){
-        return String.format("The review: %s is written by %s with %d stars for %s. After review, the star rating for %s is %d", this.body, this.author, this.numOfStarFromReview,this.getName(),this.getName(),(numOfStarFromReview + this.getNumOfStar())/2);
+    //constructor for people go to theater and watch the movie
+    public Review(String body, String author, int numOfStarFromReview, String movieName){
+        this.body = body;
+        this.author = author;
+        this.numOfStarFromReview = numOfStarFromReview;
+        this.movieName = movieName;
     }
 
+    public String toString(){
+        if (movieName == null) {
+            return String.format("The review: '%s' is written by %s with %d stars.",
+                    this.body, this.author, this.numOfStarFromReview);
+        }else{
+            return String.format("The review: '%s' is written by %s with %d stars. I watched movie %s",
+                    this.body, this.author, this.numOfStarFromReview,this.movieName);
+        }
 
+    }
+
+    public String getBody(){
+        return this.body;
+    }
+
+    public String getAuthor(){
+        return this.author;
+    }
+
+    public int getNumOfStarFromReview(){
+        return this.numOfStarFromReview;
+    }
 }

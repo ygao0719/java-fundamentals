@@ -8,16 +8,15 @@ public class ReviewTest {
 
     @Test
     public void test_toString() {
-        Review instanceForTest = new Review("Pho",5,3,"This place is nice","Tim", 3);
-        String expect = "The review: This place is nice is written by Tim with 3 stars for Pho.";
+        Review instanceForTest = new Review("This place is nice","Tim", 3);
+        String expect = "The review: 'This place is nice' is written by Tim with 3 stars.";
         assertEquals(expect,instanceForTest.toString());
     }
-// test addReview method
     @Test
-    public void test_addReview() {
-        Review instanceForTest = new Review("Pho",5,3,"This place is nice","Tim", 3);
-        String expect = "The review: This place sucks is written by David with 7 stars for Pho. After review, the star rating for Pho is 6";
-        assertEquals(expect,instanceForTest.addReview("This place sucks","David",7));
+    public void test_getNumOfStar() {
+        Review instanceForTest = new Review("This restaurant is not so good","Dave",1);
+        int expect = 1;
+        assertEquals(expect,instanceForTest.getNumOfStarFromReview());
     }
 
 }
