@@ -9,7 +9,7 @@ public class RestaurantTest {
     @Test
     public void test_toString() {
         Restaurant instanceForTest = new Restaurant("Pho",2);
-        String expect = "The restaurant Pho has 0 stars and 2 dollor signs with reviews: [].";
+        String expect = "The restaurant Pho has 0 stars and 2 dollor signs.";
         assertEquals(expect,instanceForTest.toString());
     }
 
@@ -24,7 +24,7 @@ public class RestaurantTest {
         assertEquals(expect,instanceForTest.toString());
     }
 
-    //test with more than one reviews
+    //test with more than one reviews. Tim gave this restaurant 4 star and Arron gave it 2 star. So finally this restaurant gets 3 star.
     @Test
     public void test_AddReview_MoreThanOne(){
         Restaurant instanceForTest = new Restaurant("Pho",2);
@@ -35,7 +35,6 @@ public class RestaurantTest {
 
         String expect = "The restaurant Pho has 3 stars and 2 dollor signs with reviews: [The review: 'This place is nice' is written by Tim with 4 stars., The review: 'It is not worthy' is written by Arron with 2 stars.].";
         assertEquals(expect,instanceForTest.toString());
-
     }
 
 }

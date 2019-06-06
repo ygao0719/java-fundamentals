@@ -15,12 +15,16 @@ public class Restaurant {
         this.numOfStar = 0;
         this.numOfDollors = numOfDollors;
         this.reviews = new ArrayList<>();
-
     }
 
     public String toString(){
-        return String.format("The restaurant %s has %d stars and %d dollor signs with reviews: %s.",
-                this.name, this.numOfStar, this.numOfDollors,this.reviews);
+        if (reviews.isEmpty()){
+            return String.format("The restaurant %s has %d stars and %d dollor signs.",
+                    this.name,this.numOfStar, this.numOfDollors);
+        }else {
+            return String.format("The restaurant %s has %d stars and %d dollor signs with reviews: %s.",
+                    this.name, this.numOfStar, this.numOfDollors, this.reviews);
+        }
     }
 
     public String getName(){
@@ -30,6 +34,7 @@ public class Restaurant {
     public int getNumOfStar(){
         return  this.numOfStar;
     }
+
     //add review for restaurant
     public void addReview(Review newReview){
         if(newReview != null){
