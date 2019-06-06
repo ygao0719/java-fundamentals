@@ -10,5 +10,8 @@ You can review restaurant, shop and theater. When you review theater, you have t
 
  ## direction to test code
 
- go inside the file src/test/java/inheritance and run [RestaurantTest](./src/test/java/inheritance/RestaurantTest.java)
- and [ReviewTest](./src/test/java/inheritance/ReviewTest).
+ go inside the file src/test/java/inheritance and run
+ [RestaurantTest](./src/test/java/inheritance/RestaurantTest.java)
+ [ReviewTest](./src/test/java/inheritance/ReviewTest).
+ [ShopTest](./src/test/java/inheritance/ShopTest).
+ [TheaterTest](./src/test/java/inheritance/TheaterTest).
