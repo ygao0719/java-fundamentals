@@ -52,4 +52,26 @@ public class TheaterTest {
         assertEquals(expect,instanceForTest.toString());
     }
 
+    //test addMovie method
+    @Test
+    public void test_addMovie(){
+        Theater instanceForTest = new Theater("Seattle theater");
+        instanceForTest.addMovie("Bad dad");
+
+        String expect = "The Seattle theater has movies [Bad dad].";
+        assertEquals(expect, instanceForTest.toString());
+    }
+
+    //test removeMovie method
+    @Test
+    public void test_removeMovie(){
+        Theater instanceForTest = new Theater("Seattle theater");
+        instanceForTest.addMovie("Bad dad");
+        instanceForTest.addMovie("Bad mom");
+        instanceForTest.removeMovie("Bad mom");
+
+        String expect = "The Seattle theater has movies [Bad dad].";
+        assertEquals(expect, instanceForTest.toString());
+    }
+
 }
