@@ -12,6 +12,7 @@ public class ReviewTest {
         String expect = "The review: 'This place is nice' is written by Tim with 3 stars.";
         assertEquals(expect,instanceForTest.toString());
     }
+
     @Test
     public void test_getNumOfStar() {
         Review instanceForTest = new Review("This restaurant is not so good","Dave",1);
