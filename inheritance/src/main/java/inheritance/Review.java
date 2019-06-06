@@ -27,7 +27,6 @@ public class Review {
             return String.format("The review: '%s' is written by %s with %d stars. I watched movie %s",
                     this.body, this.author, this.numOfStarFromReview,this.movieName);
         }
-
     }
 
     public String getBody(){
