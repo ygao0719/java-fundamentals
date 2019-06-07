@@ -4,11 +4,11 @@ Create a Shop class; a Shop should have a name, description, and number of dolla
 Create a Theater class; a Theater should have a name and all of the movies currently showing there
 
 - You can review restaurant, shop and theater. When you review theater, you have the opition to tell me what movies you watched.
-## overview of the architecture
+## Overview of the architecture
  - main code is located in src/main/java/inheritance
  - test code is located in src/test/java/inheritance
 
-## direction to test code
+## Direction to test code
 
  go inside the file src/test/java/inheritance and run
  - [RestaurantTest](./src/test/java/inheritance/RestaurantTest.java)
